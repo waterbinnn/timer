@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>timer</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <img src="./assets/image/weniv-logo.svg" alt="위니브로고" class="logo-img">
+
+    <article class="timer">
+      <div class="timer-wrapper">
+        <h1>TIMER</h1>
+        <section class="timer-nums">
+          <h2 class="ir">timer nums</h2>
+          <div class="box-wrapper">
+            <span>HRS</span>
+            <div class="time-box" id="hrs">00</div>
+          </div>
+          <div class="box-wrapper">
+            <span>MIN</span>
+            <div class="time-box" id="min">00</div>
+          </div>
+          <div class="box-wrapper">
+            <span>SEC</span>
+            <div class="time-box" id="sec">00</div>
+          </div>
+        </section>
+        <section class="timer-btn">
+          <button type="button">
+            <img src="assets/image/start-disabled.svg" alt="시작버튼" class="btn-start">
+          </button>
+          <button type="reset">
+            <img src="assets/image/reset-disabled.svg" alt="리셋버튼" class="btn-reset">
+          </button>
+        </section>
+      </div>
+    </article>
+    <footer>
+      ⓒ WENIV Corp.
+    </footer>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
