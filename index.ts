@@ -36,7 +36,7 @@ for (let i = 0; i < timebox.length; i++) {
         //클릭시 숫자 up
         if (i === 2) {
             //sec
-            time += 2;
+            time += 10;
         } else {
             //hrs, min
             time++;
@@ -84,6 +84,7 @@ function playTimer() {
         if (secCount === 0 && minCount === 0 && hrsCount === 0) {
             clearInterval(timer);
             resetTimer();
+            alert('Time is up!');
         }
 
         //타이머 텍스트 변경값
