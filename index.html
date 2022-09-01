@@ -2,52 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>timer</title>
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>timer</title>
+	<link rel="stylesheet" href="./assets/scss/main.css">
 </head>
 
 <body>
-  <div class="wrapper">
-    <img src="./assets/image/weniv-logo.svg" alt="위니브로고" class="logo-img">
+	<header>
+		<h1 class="text-title">⏰</h1>
+	</header>
+	<main class="container-timer">
+		<article class="wrapper-timer">
+			<h2 class="section-title">TIMER</h2>
+			<section class="timer-nums">
+				<h2 class="visually-hidden">timer nums</h2>
+				<div class="box-wrapper">
+					<span>HRS</span>
+					<button class="time-box" id="hrs">00</button>
+				</div>
+				<div class="box-wrapper">
+					<span>MIN</span>
+					<button class="time-box" id="min">00</button>
+				</div>
+				<div class="box-wrapper">
+					<span>SEC</span>
+					<button class="time-box" id="sec">00</button>
+				</div>
+			</section>
+			<section class="wrapper-btn">
+				<h2 class="visually-hidden">buttons</h2>
+				<button type="button" class="btn-timer start" disabled>
+					<img src="./assets/image/start-disabled.svg" alt="타이머시작" id="img-start">
+				</button>
+				<button type="button" class="btn-timer pause">
+					<img src="./assets/image/pause.svg" alt="타이머중단" id="img-pause">
+				</button>
+				<button type="reset" class='btn-timer reset' disabled>
+					<img src="./assets/image/reset-disabled.svg" alt="타이머 리셋" id="img-reset">
+				</button>
+			</section>
+		</article>
+		<footer>
+			ⓒ waterbinnn
+		</footer>
+	</main>
 
-    <article class="timer">
-      <div class="timer-wrapper">
-        <h1>TIMER</h1>
-        <section class="timer-nums">
-          <h2 class="ir">timer nums</h2>
-          <div class="box-wrapper">
-            <span>HRS</span>
-            <div class="time-box" id="hrs">00</div>
-          </div>
-          <div class="box-wrapper">
-            <span>MIN</span>
-            <div class="time-box" id="min">00</div>
-          </div>
-          <div class="box-wrapper">
-            <span>SEC</span>
-            <div class="time-box" id="sec">00</div>
-          </div>
-        </section>
-        <section class="timer-btn">
-          <button type="button">
-            <img src="assets/image/start-disabled.svg" alt="시작버튼" class="btn-start">
-          </button>
-          <button type="reset">
-            <img src="assets/image/reset-disabled.svg" alt="리셋버튼" class="btn-reset">
-          </button>
-        </section>
-      </div>
-    </article>
-    <footer>
-      ⓒ WENIV Corp.
-    </footer>
-  </div>
-
-  <script src="index.js"></script>
+	<script src="index.js"></script>
 </body>
 
 </html>
