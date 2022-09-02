@@ -24,7 +24,9 @@ const resetTimer = () => {
 };
 for (let i = 0; i < timebox.length; i++) {
     timebox[i].addEventListener('click', (e) => {
-        let time = parseInt(e.target.textContent);
+        const eventTarget = e.target;
+        const text = eventTarget.textContent;
+        let time = parseInt(text);
         //클릭시 숫자 up
         if (i === 2) {
             //sec
@@ -34,12 +36,12 @@ for (let i = 0; i < timebox.length; i++) {
             //hrs, min
             time++;
         }
-        e.target.textContent = time;
+        eventTarget.textContent = time.toString();
         if (time < 10) {
-            e.target.textContent = '0' + time;
+            eventTarget.textContent = '0' + time;
         }
         else {
-            e.target.textContent = time;
+            eventTarget.textContent = time.toString();
         }
         setTimeUp();
     });
@@ -47,9 +49,9 @@ for (let i = 0; i < timebox.length; i++) {
 let timer;
 //타이머 작동 함수
 function playTimer() {
-    let hrsCount = parseInt(timebox[0].innerHTML);
-    let minCount = parseInt(timebox[1].innerHTML);
-    let secCount = parseInt(timebox[2].innerHTML);
+    let hrsCount = parseInt(timebox[0].textContent);
+    let minCount = parseInt(timebox[1].textContent);
+    let secCount = parseInt(timebox[2].textContent);
     function clock() {
         if (hrsCount > 0 || minCount >= 0) {
             secCount--;
@@ -81,26 +83,23 @@ function playTimer() {
         }
         //타이머 텍스트 변경값
         if (hrsCount < 10) {
-            timebox[0].innerHTML = '0' + hrsCount;
+            timebox[0].textContent = '0' + hrsCount;
         }
         else {
-            timebox[0].innerHTML = hrsCount.toString();
+            timebox[0].textContent = hrsCount.toString();
         }
         if (minCount < 10) {
-            timebox[1].innerHTML = '0' + minCount;
+            timebox[1].textContent = '0' + minCount;
         }
         else {
-            timebox[1].innerHTML = minCount.toString();
+            timebox[1].textContent = minCount.toString();
         }
         if (secCount < 10) {
-            timebox[2].innerHTML = '0' + secCount;
+            timebox[2].textContent = '0' + secCount;
         }
         else {
-            timebox[2].innerHTML = secCount.toString();
+            timebox[2].textContent = secCount.toString();
         }
-        // console.log('sec', secCount);
-        // console.log('min', minCount);
-        // console.log('hrs', hrsCount);
     }
     timer = setInterval(clock, 1000);
 }
