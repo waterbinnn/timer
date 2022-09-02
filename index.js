@@ -60,8 +60,10 @@ function playTimer() {
                 secCount = 59;
             }
             else if (hrsCount > 0 && minCount === 0 && secCount > 0) {
-                hrsCount--;
-                minCount = 59;
+                if (secCount === 0) {
+                    hrsCount--;
+                    minCount = 59;
+                }
             }
             else if (hrsCount >= 1 && secCount > 0) {
                 if (minCount === 0) {
